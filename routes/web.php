@@ -41,6 +41,8 @@ Route::prefix(LaravelLocalization::setLocale())
 });
 
 Route::prefix('admin')->name('admin.')->group(function (){
+    require __DIR__.'/auth.php';
+
     Route::middleware('auth')->group(function (){
         Route::get('index',[AdminController::class,'index'])->name('index');
         Route::resource('services', ServicesController::class);
@@ -51,9 +53,7 @@ Route::prefix('admin')->name('admin.')->group(function (){
             });
 });
 
-
-        });
-
+});
 
 
 // Route::get('/', function () {
@@ -70,4 +70,5 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
+ 

@@ -32,7 +32,7 @@
         </div>
 
         {{-- الفورم --}}
-        <form action="{{ route('login') }}" method="post" class="col-lg-3 col-md-4 col-10 mx-auto text-center">
+        <form action="{{ route('admin.login') }}" method="post" class="col-lg-3 col-md-4 col-10 mx-auto text-center">
             @csrf
 
             {{-- شعار --}}

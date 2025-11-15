@@ -10,7 +10,7 @@
      
       @include('admin.partials.sidebar')
       @yield('content')
-      
+
     </div> <!-- .wrapper -->
       @include('admin.partials.script')
 
